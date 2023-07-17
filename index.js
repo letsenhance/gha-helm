@@ -203,7 +203,7 @@ async function deploy(helm) {
   const timeout = getInput("timeout");
   const dryRun = core.getInput("dry-run");
   const secrets = getSecrets(core.getInput("secrets"));
-  const atomic = getInput("atomic") || true;
+  const atomic = getInput("atomic") || false;
 
   core.debug(`param: track = "${track}"`);
   core.debug(`param: release = "${release}"`);
